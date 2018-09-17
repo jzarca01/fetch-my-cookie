@@ -17,8 +17,8 @@ node index.js
 Send a POST request to *http://localhost:4000/cookie*
 ```json
 {
-    "storeNumber": "12345-0" (you'll find the real infos or your receipt)
-    "date": "12/09/2018" (DD/MM/YYYY)
+    "storeNumber": "12345-0", //you'll find the real infos or your receipt
+    "date": "12/09/2018", //DD/MM/YYYY
     "time": "12:03"
 }
 ```
