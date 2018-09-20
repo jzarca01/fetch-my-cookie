@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json())
 
-const fetchCookie = async function(storeNumber = '55141-0', date, time) {
+const fetchCookie = async function(storeNumber = '12345-0', date, time) {
   const dateFormatted = moment(date, 'DD/MM/YYYY').format('MM/DD/YYYY').toString()
 
   try {
