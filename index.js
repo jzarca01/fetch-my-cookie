@@ -12,8 +12,13 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json())
 
 app.post('/cookie', async (req, res) => {
-    const cookie = await fetchCookie(req.body.storeNumber, req.body.date, req.body.time)
-    res.status(200).send(cookie)
+    try {
+        const cookie = await fetchCookie(req.body.storeNumber, req.body.date, req.body.time)
+        res.status(200).send(cookie)
+    }
+    catch(err) {
+        res.status(400).send(err)
+    }
 })
 
 app.listen(PORT, () => {

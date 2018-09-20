@@ -17,7 +17,8 @@ const fetchCookie = async function(storeNumber = '12345-0', date, time) {
   try {
     const browser = await puppeteer.launch({
       headless: true,
-      slowMo: 20
+      slowMo: 20,
+      args: ['--no-sandbox', '--disable-setuid-sandbox']
     })
     const page = await browser.newPage()
 
